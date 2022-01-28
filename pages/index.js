@@ -39,7 +39,7 @@ export default function PaginaInicial() {
   // const username = 'omariosouto';
   const [username, setUsername] = React.useState('peas');
   const roteamento = useRouter();
-  var numeroCaracteresDigitados = 0;
+  // var numeroCaracteresDigitados = 0;
 
   // console.log(setUsername);
 
@@ -107,8 +107,10 @@ export default function PaginaInicial() {
               onChange={function handler(event) {
                 // console.log('Usuário digitou ... ', event.target.value);
                 // Onde está o valor?
-                const valor = event.target.value;
-                numeroCaracteresDigitados = valor.length;
+                if (event.target.value.length > 2) {
+                  const valor = event.target.value;
+                }
+                // numeroCaracteresDigitados = valor.length;
                 // console.log(numeroCaracteresDigitados);
                 // Trocar o valor da variável
                 // através do React e ele avisa quem for preciso
